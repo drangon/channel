@@ -1,0 +1,58 @@
+@import './base/base.less';
+@import './base/reset.css';
+.bd-wrapper{
+    overflow: hidden;
+}
+body {
+    .background(bg-4,jpg);
+}
+
+.login-box{
+    margin-top: 2rem;
+}
+.icon-tel{
+    display: inline-block;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.35rem;
+    width: 0.59rem;
+    height: 0.44rem;
+    .background(tel,png);
+}
+.submit-btn{
+    margin-top: 1.6rem;
+    width: 2.86rem;
+    line-height: 0.76rem;
+    color: @whitecol;
+    .px2rem(font-size, 36);
+    .borderF(@width,0.38rem,#0b8cad);
+        &:after{
+            position: absolute;
+            .pramspro(top,-@width);
+            .pramspro(bottom,-@width);
+            .pramspro(left,-@width);
+            .pramspro(right,-@width);
+            content: '';
+            z-index: -1;
+            .backgroundLinear(#4a2441,#1a0614);
+            .pramspro(border-radius,0.38rem);
+        }
+}
+.phone{
+    width: 100%;
+    padding: 0.24rem 1.2rem; 
+    .px2rem(font-size, 36);
+}
+
+.tips{
+    color: @whitecol;
+    .px2rem(font-size,33);
+    margin-bottom: 0.35rem;
+}
+.tel-box{
+    height: 0.91rem;
+    background: @whitecol;
+    border-radius: 0.45rem;
+    margin: 0 0.97rem;
+    overflow: hidden;
+}

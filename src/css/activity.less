@@ -1,0 +1,86 @@
+@import './base/base.less';
+@import './base/reset.css';
+.bd-wrapper{
+    background:url('../images/dhrc-top.jpg') center top no-repeat,url("../images/repeat-line.jpg") center 8.84rem repeat,url("../images/dhrc-bottom.jpg") center bottom no-repeat;
+    background-size: 100% auto;
+}
+.bg-bottom{
+    background:url('../images/dhrc-bottom.jpg') bottom center no-repeat;
+    background-size: 100% auto;
+}
+
+.activity-wrapper{
+    padding: 0 0.3rem;
+    margin-top: 0.91rem;
+    padding-bottom: 0.9rem;
+    h2{
+        .px2rem(font-size,60);
+        color: @whitecol;
+        font-weight: bold;
+    }
+    .main-header{
+        a{
+            float:right;
+            margin-top: 0.2rem;
+            .px2rem(font-size,30);
+            color: @whitecol;
+            padding-right: 0.3rem;
+        }
+    }
+    .time_box{
+        margin-top: 0.42rem;
+        padding-left: 0.16rem;
+        padding-top: 0.15rem;
+        border-left: 0.06rem solid #ccc;
+        span{
+            color: #999;
+            .px2rem(font-size,30);
+            position: relative;
+            &:before{
+                content:'';
+                position: absolute;
+                width: 0.24rem;
+                height: 0.24rem;
+                background: #230e18;
+                left:-0.32rem;
+                top: 0.13rem;
+                border-radius: 50%;
+            }
+            &:after{
+                content:'';
+                position: absolute;
+                width: 0.14rem;
+                height: 0.14rem;
+                background: #c1272d;
+                left:-0.27rem;
+                top: 0.19rem;
+                border-radius: 50%;
+            }
+        }
+        p{
+            margin: 0.22rem 0 0.45rem -0.16rem;
+            color: @whitecol;
+            .px2rem(font-size,32);
+
+        }
+    }
+}
+.arrow-forward{
+    display: inline-block;
+    border-left: 0.03rem solid @whitecol;
+    border-top: 0.03rem solid @whitecol;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    width: 0.22rem;
+    height: 0.22rem;
+
+}
+
+.copyright{
+    color: @whitecol;
+    .px2rem(font-size,26);
+    line-height: 0.36rem;
+    padding-bottom: 0.45rem;
+    text-align: center;
+    width: 100%;
+}

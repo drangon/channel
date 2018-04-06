@@ -1,0 +1,97 @@
+@import './base/base.less';
+@import './base/reset.css';
+.bd-wrapper{
+    position: relative;
+    z-index: 1;
+    .background(bg-2,jpg);
+    overflow: hidden;
+}
+
+.nav-box {
+    display:-webkit-flex;
+    display: flex;
+    padding: 0.23rem 0.3rem 0;
+    width:100%;
+    .left-side-nav,.right-side-nav{
+        width:3.45rem;
+        -webkit-flex:1;
+        flex:1;
+        margin-left: 0.38rem;
+        li{
+            margin-bottom: 0.79rem;
+        }
+    }
+    .left-side-nav{
+        li:nth-child(4){
+            margin-bottom:0.74rem;
+        }
+        li:last-child{
+            margin-bottom:0.7rem;
+        }
+    }
+    .right-side-nav{
+        margin:0.6rem 0.32rem 0 0.32rem;
+    }
+    a{
+        display:block;
+        line-height: 0.76rem;
+        .px2rem(font-size,36);
+        color: #c2c0c2;
+        text-align: center;
+        .borderF(@width,0.38rem,#919091);
+        &:after{
+            position: absolute;
+            .pramspro(top,-@width);
+            .pramspro(bottom,-@width);
+            .pramspro(left,-@width);
+            .pramspro(right,-@width);
+            content: '';
+            z-index: -1;
+            .backgroundLinear(#4a2441,#1a0614);
+            .pramspro(border-radius,0.38rem);
+        }
+    }
+    .nav-red {
+        a{
+            color: #e4e4e4;
+            background: #c1272d;
+            background-clip: padding-box;
+        }
+    }
+    .nav-white {
+        a{
+            color: #021631;
+            background: @whitecol;
+            background-clip: padding-box;
+        }
+    }
+    .nav-blue {
+        a{
+            color: #e8e8e8;
+            background: #0b8cad;
+            background-clip: padding-box;
+        }
+    }
+    .nav-sred {
+        a{
+            color: #e8e8e8;
+            background: #c1272d;
+            background-clip: padding-box;
+        }
+    }
+}
+.power-up{
+    background: url('../images/power-up.png') no-repeat top center;
+    background-size: cover;
+    width:3.68rem;
+    height:1.69rem;
+    float:right;
+    margin-right:0.6rem;
+}
+.copyright{
+    color: @whitecol;
+    .px2rem(font-size,26);
+    line-height: 0.36rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+}

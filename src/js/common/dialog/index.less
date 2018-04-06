@@ -1,0 +1,97 @@
+@import '../../../css/base/base.less';
+@radius:0.17rem;
+.dialog-pop{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.65);
+    z-index: 1000;
+}
+.dialog-box  {
+    position: absolute;
+    width: 5.76rem;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    .dialog-content{
+        padding:0.42rem 0.42rem 0.5rem;
+        color: @whitecol;
+        .px2rem(font-size,36);
+        text-align: center;
+        .borderF(@width,@radius,@bluecol);
+        &:after{
+            position: absolute;
+            .pramspro(top,-@width);
+            .pramspro(bottom,-@width);
+            .pramspro(left,-@width);
+            .pramspro(right,-@width);
+            content: '';
+            z-index: -1;
+            .backgroundLinear(#17a8c0,#9e2025);
+            .pramspro(border-radius,@radius);
+        }
+        .dialog-tips{
+            .px2rem(font-size,48);
+            color: #f9d35b;
+            i{
+                display: inline-block;
+                width:0.7rem;
+                height: 0.7rem;
+                background: url('../../../images/warn.png') no-repeat;
+                background-size: cover;
+                margin-right: 0.3rem;
+                vertical-align: -0.15rem;
+            }
+        }
+        .dialog-cont{
+            margin-top: 0.14rem;
+            line-height: 0.6rem;
+            min-height: 3.4rem;
+        }
+        .btns{
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0;
+            width: 100%;
+            a{
+                margin: 0 0.18rem;
+            }
+        }
+    }
+    .dialog-wrap{
+        color: @whitecol;
+        .px2rem(font-size,40);
+        text-align: center;
+        padding: 0.8rem 0.57rem 0.57rem;
+        .borderF(@width,@radius,@bluecol);
+        &:after{
+            position: absolute;
+            .pramspro(top,-@width);
+            .pramspro(bottom,-@width);
+            .pramspro(left,-@width);
+            .pramspro(right,-@width);
+            content: '';
+            z-index: -1;
+            .backgroundLinear(#17a8c0,#9e2025);
+            .pramspro(border-radius,@radius);
+        }
+    }
+    .close,.sure-btn{
+        display: inline-block;
+        .px2rem(font-size,30);
+        color: @whitecol;
+        margin-top: 0.8rem;
+        background: #0b8cad;
+        border-radius: 0.38rem;
+        line-height: 0.76rem;
+        text-align: center;
+        width: 2.12rem;
+    }
+
+}
+

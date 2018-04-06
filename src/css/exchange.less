@@ -1,0 +1,170 @@
+@import './base/base.less';
+@import './base/reset.css';
+body {
+    background:url('../images/dhrc-top.jpg') center top no-repeat,url("../images/repeat-line.jpg") center 8.84rem repeat,url("../images/dhrc-bottom.jpg") center bottom no-repeat;
+    background-size: 100% auto;
+    color: @whitecol;
+}
+
+.bg-bottom{
+    background:url('../images/dhrc-bottom.jpg') bottom center no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    z-index: 2;
+}
+
+.exchange-wrapper{
+    margin: 1.02rem 0.42rem 1.06rem;
+    .main-header{
+        position: relative;
+        .go-back{
+            .px2rem(font-size,30);
+            color: @whitecol;
+            padding-left: 0.25rem;
+            &:before{
+                content:'';
+                position: absolute;
+                left: 0;
+                top:0.08rem;
+                width: 0.18rem;
+                height: 0.18rem;
+                border-top: 0.03rem solid @whitecol;
+                border-left: 0.03rem solid @whitecol;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+    .main-body{
+        margin: 0.42rem 0;
+        .borderF(@width,0.37rem,@bluecol);
+        &:after{
+            position: absolute;
+            .pramspro(top,-@width);
+            .pramspro(bottom,-@width);
+            .pramspro(left,-@width);
+            .pramspro(right,-@width);
+            content: '';
+            z-index: -1;
+            .backgroundLinear(#18a6bd,#ac222c);
+            .pramspro(border-radius,0.37rem);
+        }
+    }
+    .nav-wrap{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        height: 0.74rem;
+        line-height: 0.74rem;
+        color: @whitecol;
+        .px2rem(font-size,36);
+        text-align: center;
+        .borderF(@width,0.37rem,@bluecol);
+        &:after{
+            position: absolute;
+            .pramspro(top,-@width);
+            .pramspro(bottom,-@width);
+            .pramspro(left,-@width);
+            .pramspro(right,-@width);
+            content: '';
+            z-index: -1;
+            .backgroundLinear(#19a5bc,#53273a);
+            .pramspro(border-radius,0.37rem);
+        }
+        .navlist{
+            -webkit-box-flex: 1;
+            flex:1;
+            margin-top: -0.03rem;
+            &:first-child{
+                border-top-left-radius: 0.37rem;
+                border-bottom-left-radius: 0.37rem;
+                .backgroundLinear(#014061,#011131);
+            }
+            &:last-child{
+                border-top-right-radius: 0.37rem;
+                border-bottom-right-radius: 0.37rem;
+                position: relative;
+                &:before{
+                    content:'';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0.03rem;
+                    height: 100%;
+                    .backgroundLinear(#19a5bc,#53273a);
+                }
+                .backgroundLinear(#011334,#014264);
+            }
+        }
+    }
+    .ewm-cont{
+        margin-top: 0.45rem;
+        padding-bottom: 0.7rem;
+        .no-gift{
+            .px2rem(font-size,36);
+            line-height: 0.6rem;
+            padding-left: 1rem;
+
+        }
+        .ewm-box{
+            margin: 0 0.45rem;
+            padding-bottom: 0.55rem;
+            border-bottom: 0.01rem dashed #5a4eda;
+            text-align: center;
+            img{
+                width: 4.1rem;
+                display: inline-block;
+                padding: 0.28rem;
+                border-radius: 0.15rem;
+                background: @whitecol;
+                overflow: hidden;
+            }
+            p{
+                .px2rem(font-size,30);
+                color: @whitecol;
+                font-style: italic;
+                font-weight: bold;
+                margin-top: 0.28rem;
+            }
+        }
+        .gift-wrap{
+            margin-top: 0.62rem;
+        }
+        .gift-list{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-around;
+            .gift_item{
+                width: 2.17rem;
+                text-align: center;
+                img{
+                    display: inline-block;
+                    width: 2.17rem;
+                    height: 2.17rem;
+                    border-radius: 0.15rem;
+                    background: @whitecol;
+                    padding: 0.15rem;
+                    overflow: hidden;
+                }
+                p{
+                    .px2rem(font-size,24);
+                    color: @whitecol;
+                    margin-top: 0.24rem;
+                }
+            }
+        }
+
+    }
+}
+.copyright{
+    color: @whitecol;
+    .px2rem(font-size,26);
+    line-height: 0.36rem;
+    padding-bottom: 0.35rem;
+    text-align: center;
+    width: 100%;
+}

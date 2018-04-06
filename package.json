@@ -1,0 +1,42 @@
+{
+    "name": "loan",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack-dev-server --mode production --inline --host 0.0.0.0",
+        "build": "webpack --mode production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-es2015": "^6.24.1",
+        "clean-webpack-plugin": "^0.1.19",
+        "css-loader": "^0.28.11",
+        "exports-loader": "^0.7.0",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^1.1.11",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.1.0",
+        "i": "^0.3.6",
+        "less": "^3.0.1",
+        "less-loader": "^4.1.0",
+        "node-glob": "^1.2.0",
+        "postcss-loader": "^2.1.3",
+        "px2rem-webpack-plugin": "^0.2.0-5",
+        "sass-loader": "^6.0.7",
+        "script-loader": "^0.7.2",
+        "style-loader": "^0.20.3",
+        "url-loader": "^1.0.1",
+        "webpack": "^4.2.0",
+        "webpack-cli": "^2.0.13",
+        "webpack-dev-server": "^3.1.1",
+        "zepto-webpack": "^1.2.1"
+    },
+    "dependencies": {
+        "zepto": "^1.2.0"
+    }
+}

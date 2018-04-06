@@ -1,0 +1,156 @@
+@import './base/base.less';
+@import './base/reset.css';
+@width:0.02rem;
+body {
+    background:url('../images/dhrc-top.jpg') center top no-repeat,url("../images/repeat-line.jpg") center 8.84rem repeat,url("../images/dhrc-bottom.jpg") center bottom no-repeat;
+    background-size: 100% auto;
+    color: @whitecol;
+}
+
+.bg-bottom{
+    background:url('../images/dhrc-bottom.jpg') bottom center no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    z-index: 2;
+}
+
+.activity-wrapper{
+    padding: 0 0.23rem 0.65rem;
+    margin-top: 1.1rem;
+    h1{
+        .px2rem(font-size,48);
+        font-style: italic;
+        font-weight: bold;
+        margin-bottom: 0.73rem;
+        text-align: center;
+        padding-left: 0.4rem;
+        word-spacing: -0.06rem;
+    }
+    .rule-wrap{
+        .px2rem(font-size,30);
+    }
+    .rule-wrap{
+        
+        .rule-list,.rule-title span{
+            position: relative;
+            background: @bluecol;
+            .borderF(@width,0.17rem,@bluecol);
+            &:after{
+                position: absolute;
+                .pramspro(top,-@width);
+                .pramspro(bottom,-@width);
+                .pramspro(left,-@width);
+                .pramspro(right,-@width);
+                content: '';
+                z-index: -1;
+                .backgroundLinear(#17a8c0,#9e2025);
+                .pramspro(border-radius,0.17rem);
+            }
+        }
+        .rule-list{
+            margin-bottom: 0.52rem;
+            padding: 0 0.3rem;
+            .rule-cont{
+                margin: 0.28rem 0 0.4rem;
+                &:last-child{
+                    margin-bottom: 0.45rem;
+                }
+                .time{
+                    position: relative;
+                    margin-bottom: 0.2rem;
+                    &:before{
+                        content:'';
+                        position: absolute;
+                        width: 100%;
+                        height:0.01rem;
+                        border-top: 0.01rem solid #1e788c;
+                        left:0;
+                        top:0.2rem;
+                    }
+                    span{
+                        position: relative;
+                        display: inline-block;
+                        padding: 0 0.21rem;
+                        height: 0.4rem;
+                        line-height: 0.4rem;
+                        .px2rem(font-size,40);
+                        color: #c1272d;
+                        font-style: italic;
+                        font-weight: bold;
+                        background: @bluecol;
+                        z-index: 2;
+                    }
+                }
+                p{
+                    line-height: 1.5;
+                    margin-bottom: 0.1rem;
+                }
+            }
+            .score-lists{
+                padding: 0.18rem 0;
+                li{
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: flex;
+                    justify-content: space-between;
+                    line-height: 0.68rem;
+                    border-bottom: 0.02rem dotted #606d7d;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    span:first-child{
+                        padding-left: 0.34rem;
+                    }
+                    span:last-child{
+                        padding-right: 0.54rem;
+                    }
+                }
+            }
+        }
+        .rule-title{
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            margin: -0.37rem auto 0;
+        }
+        .rule-title span{
+            display: inline-block;
+            width: 3.2rem;
+            text-align: center;
+            line-height: 0.76rem;
+            .px2rem(font-size,36);
+            .borderF(@width,0.38rem,@bluecol);
+            &:after{
+                .pramspro(border-radius,0.38rem);
+            }
+        }
+    }
+    .rule-time{
+        .px2rem(font-size,30);
+        padding:0 0.27rem;
+        .activity-info-list{
+            .left-type{
+                float: left;
+            }
+            p{
+                margin-left: 1.45rem;
+                line-height: 1.5;
+                margin-bottom: 0.1rem;
+                margin-top: -0.04rem;
+            }
+        }
+        .tb-tips{
+            .px2rem(font-size,24);
+            text-align: center;
+        }
+    }
+}
+
+.copyright{
+    color: @whitecol;
+    .px2rem(font-size,26);
+    line-height: 0.36rem;
+    padding-bottom: 0.35rem;
+    text-align: center;
+    width: 100%;
+}

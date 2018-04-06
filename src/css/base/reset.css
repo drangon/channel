@@ -1,0 +1,162 @@
+@charset "UTF-8";
+* {
+    -webkit-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline
+}
+
+body {
+    line-height: 1.2;
+    /* font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif; */
+    font-family: "Microsoft YaHei", Helvetica;
+    background: #f7f7f7;
+    -webkit-overflow-scrolling: touch;
+    color: #333;
+}
+
+ol,
+li,
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    -webkit-text-size-adjust: 100%;
+}
+
+input:-ms-clear {
+    display: none;
+}
+
+::-webkit-search-cancel-button {
+    display: none;
+}
+
+input,
+textarea {
+    outline: 0;
+    resize: none;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+img {
+    display: block;
+    border: 0;
+    /* border: 1px solid transparent; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+}
+
+.v-hide {
+    overflow: hidden;
+}
+
+.pos_rel {
+    position: relative;
+}
+
+.t_ac {
+    text-align: center;
+}
+
+.t_ar {
+    text-align: right;
+}
+
+.t_al {
+    text-align: left;
+}
+
+
+/*登录*/
+
+#login {
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    width: 2.49rem;
+    height: 0.63rem;
+    background: url('../../images/logo.png') no-repeat;
+    background-size: cover;
+    margin: 0.3rem 0 0 0.3rem;
+}

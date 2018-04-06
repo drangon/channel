@@ -1,0 +1,43 @@
+
+@import '../../../css/base/base.less';
+.message-box {
+    position: absolute;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.15rem;
+    padding: 0 0.25rem;
+    text-align: center;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .px2rem(font-size,30);
+}
+
+.animate-message {
+    -webkit-animation: hideF 1s ease-in;
+    -webkit-animation-fill-mode: both;
+    animation: hideF 1s ease-in;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes hideF {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hideF {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

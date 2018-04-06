@@ -1,0 +1,65 @@
+@import './base/base.less';
+@import './base/reset.css';
+body {
+    .background(bg-4,jpg);
+}
+
+.submit-btn{
+    margin-top: 0.5rem;
+    width: 2.86rem;
+    line-height: 0.76rem;
+    color: @whitecol;
+    .px2rem(font-size, 36);
+    .borderF(@width,0.38rem,#0b8cad);
+    &:after{
+        position: absolute;
+        .pramspro(top,-@width);
+        .pramspro(bottom,-@width);
+        .pramspro(left,-@width);
+        .pramspro(right,-@width);
+        content: '';
+        z-index: -1;
+        .backgroundLinear(#4a2441,#1a0614);
+        .pramspro(border-radius,0.38rem);
+    }
+}
+
+.vote-box{
+    margin: 0.7rem 0.6rem 0;
+    color: @whitecol;
+    .tips{
+        .px2rem(font-size,36);
+    }
+    .vote-checkbox{
+        position: relative;
+        margin-top: 0.3rem;
+        .px2rem(font-size,30);
+        li{
+            position: relative;
+            padding-left: 0.85rem;
+            line-height: 0.6rem;
+            &:before{
+                content:'';
+                position: absolute;
+                top:0.13rem;
+                left: 0.33rem;
+                width: 0.32rem;
+                height: 0.32rem;
+                border: 0.02rem solid @whitecol;
+                border-radius: 50%;
+            }
+            
+            &.active:after{
+                content:'';
+                position: absolute;
+                background: #c81d1d;
+                width: 0.22rem;
+                height: 0.22rem;
+                left: 0.4rem;
+                top: 0.2rem;
+                border-radius: 50%;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,65 @@
+@import './base/base.less';
+@import './base/reset.css';
+body {
+    .background(bg-4,jpg);
+}
+
+.logolist-box{
+    margin-top: 0.7rem;
+    color: @whitecol;
+    .px2rem(font-size,36);
+    .logo-list{
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: wrap;
+        margin-top: 0.1rem;
+        li{
+            width: 2.07rem;
+            margin-left: 0.31rem;
+            margin-top: 0.3rem;
+            span{
+                position: relative;
+                display: block;
+                height: 0.68rem;
+                line-height: 0.78rem;
+                border-radius: 0.34rem;
+                background: #635252;
+                text-align: center;
+                img{
+                    display: inline-block;
+                    width: 70%;
+                    &:nth-child(2){
+                        display:none;
+                    }
+                }
+
+            }
+            &.active{
+                span{
+                    img{
+                        display: none;
+                        &:nth-child(2){
+                            display:inline-block;
+                        }
+                    }
+                    line-height: 0.74rem;
+                    .borderF(@width,0.34rem,@whitecol);
+                    &:after{
+                        position: absolute;
+                        .pramspro(top,-@width);
+                        .pramspro(bottom,-@width);
+                        .pramspro(left,-@width);
+                        .pramspro(right,-@width);
+                        content: '';
+                        z-index: -1;
+                        .backgroundLinear(#1cc7e0,#a02731);
+                        .pramspro(border-radius,0.34rem);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    
+}

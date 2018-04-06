@@ -1,0 +1,77 @@
+@width:0.03rem;
+@whitecol:#fff;
+@bluecol:#112540;
+@imgpath:'../../images/';
+.px2rem(@name:"font-size",@px){
+    @{name}: round(@px/2) * 1px;
+
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    [data-dpr="2.5"] & {
+        @{name}: round(@px*2.5/2) * 1px;
+    }
+    [data-dpr="2.625"] & {
+        @{name}: round(@px*2.625/2) * 1px;
+    }
+    [data-dpr="2.75"] & {
+        @{name}: round(@px*2.75/2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px*3/2) * 1px;
+    }
+    [data-dpr="3.5"] & {
+        @{name}: round(@px*3.5/2) * 1px;
+    }
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+.background(@name,@unit){
+    background: url('@{imgpath}@{name}.@{unit}') no-repeat top center;
+    background-size: 100% 100%;
+    
+}
+.borderF(@width,@borderRus,@bgcolor){
+    position: relative;
+    border: @width solid transparent;
+    border-radius: @borderRus;
+    background: @bgcolor;
+    background-clip: padding-box;
+}
+.pramspro(@name,@width){
+    @{name}:@width;
+}
+.backgroundLinear(@jb1,@jb2){
+    background: -webkit-linear-gradient(@jb1, @jb2);
+    background: -moz-linear-gradient(@jb1, @jb2);
+    background: linear-gradient(@jb1, @jb2);
+}
+.wrapper{
+    .copyright{
+        position: absolute;
+        bottom: 0.3rem;
+        color: @whitecol;
+        .px2rem(font-size,26);
+        line-height: 0.36rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+.go-back-top{
+    display: inline-block;
+    position: fixed;
+    bottom: 0.3rem;
+    right: 0.3rem;
+    .background(back-top,png);
+    width: 1.2rem;
+    height: 1.2rem;
+    z-index: 3;
+}
+.power-up{
+    .background(power-up,png);
+    width:3.68rem;
+    height:1.69rem;
+    float:right;
+    margin-right:0.6rem;
+}
